@@ -1,0 +1,96 @@
+:root {
+    --primary-color: var(--bs-success); 
+    --secondary-color: var(--bs-primary);
+    --accent-color: var(--bs-warning); 
+}
+
+body {
+    font-family: 'Poppins', var(--bs-font-sans-serif);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(var(--bs-black-rgb), 0.5), rgba(var(--bs-black-rgb), 0.5)), url('assets/img/hero/sekolah-main.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    color: var(--bs-white);
+}
+
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(var(--bs-black-rgb), 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(var(--bs-black-rgb), 0.15);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.program-card {
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.program-card:hover {
+    background-color: var(--bs-light); 
+}
+
+.info-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal)); 
+    color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.prestasi-badge {
+    background-color: var(--accent-color);
+    color: var(--bs-black); 
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+footer {
+    background: linear-gradient(135deg, var(--bs-gray-900), var(--bs-gray-800));
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--bs-white);
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--bs-white);
+    color: var(--primary-color);
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+}

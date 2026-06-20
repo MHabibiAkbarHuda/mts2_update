@@ -1,0 +1,302 @@
+:root {
+    --primary-color: var(--bs-success); 
+    --secondary-color: var(--bs-primary); 
+    --accent-color: var(--bs-warning); 
+}
+
+body {
+    font-family: 'Poppins', var(--bs-font-sans-serif);
+    background-color: var(--bs-light); 
+}
+
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal)); 
+    color: var(--bs-white);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('assets/img/hero/sekolah-main.jpg') center/cover;
+    opacity: 0.1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.news-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(var(--bs-black-rgb), 0.15);
+}
+
+.news-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.news-date {
+    background-color: var(--primary-color);
+    color: var(--bs-white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.news-category {
+    background-color: var(--accent-color);
+    color: var(--bs-black);
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.agenda-card {
+    border-left: 4px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--bs-white);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(var(--bs-black-rgb), 0.08);
+    transition: all 0.3s ease;
+}
+
+.agenda-card:hover {
+    box-shadow: 0 5px 20px rgba(var(--bs-black-rgb), 0.12);
+    transform: translateX(5px);
+}
+
+.agenda-date {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal));
+    color: var(--bs-white);
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 80px;
+}
+
+.agenda-date .day {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.agenda-date .month {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.announcement-card {
+    background: linear-gradient(135deg, var(--bs-warning-bg-subtle), var(--bs-warning-border-subtle));
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent-color);
+}
+
+.announcement-card.urgent {
+    background: linear-gradient(135deg, var(--bs-danger-bg-subtle), var(--bs-danger-border-subtle));
+    border-color: var(--bs-danger);
+}
+
+.announcement-card.success {
+    background: linear-gradient(135deg, var(--bs-success-bg-subtle), var(--bs-success-border-subtle));
+    border-color: var(--bs-success); 
+}
+
+.search-box {
+    background-color: var(--bs-white);
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+}
+
+.search-box input {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: 100%;
+}
+
+.search-box input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.filter-btn {
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin: 5px;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--bs-white);
+    border-color: var(--primary-color);
+}
+
+.pagination .page-link {
+    color: var(--primary-color);
+    border-radius: 50px;
+    margin: 0 3px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.sidebar-card {
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+}
+
+.sidebar-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+}
+
+.category-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.category-list li:last-child {
+    border-bottom: none;
+}
+
+.category-list a {
+    color: var(--bs-secondary-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-list a:hover {
+    color: var(--primary-color);
+}
+
+.popular-post {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--bs-border-color); 
+}
+
+.popular-post:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.popular-post img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.newsletter-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal));
+    color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.newsletter-box input {
+    border-radius: 50px;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+footer {
+    background: linear-gradient(135deg, var(--bs-gray-900), var(--bs-gray-800));
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--bs-white);
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--bs-white);
+    color: var(--primary-color);
+}
+
+.badge-kategori {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.badge-akademik { background-color: var(--bs-primary); color: var(--bs-white); }
+.badge-kesiswaan { background-color: var(--bs-success); color: var(--bs-white); } 
+.badge-umum { background-color: var(--bs-secondary); color: var(--bs-white); } 
+.badge-prestasi { background-color: var(--bs-warning); color: var(--bs-black); } 
+.badge-adiwiyata { background-color: var(--bs-teal); color: var(--bs-white); } 

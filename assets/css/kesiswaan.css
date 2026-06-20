@@ -1,0 +1,275 @@
+:root {
+    --primary-color: var(--bs-success); 
+    --secondary-color: var(--bs-primary); 
+    --accent-color: var(--bs-warning);
+}
+
+body {
+    font-family: 'Poppins', var(--bs-font-sans-serif);
+    background-color: var(--bs-light); 
+}
+
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal)); 
+    color: var(--bs-white);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('assets/img/hero/sekolah-main.jpg') center/cover;
+    opacity: 0.1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.osis-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal));
+    color: var(--bs-white);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(var(--bs-black-rgb), 0.2);
+}
+
+.osis-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--bs-white);
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 5px 15px rgba(var(--bs-black-rgb), 0.3);
+}
+
+.ekskul-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.ekskul-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(var(--bs-black-rgb), 0.15);
+}
+
+.ekskul-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.ekskul-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.prestasi-card {
+    border-left: 5px solid var(--accent-color);
+    border-radius: 15px;
+    background-color: var(--bs-white);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    transition: all 0.3s ease;
+}
+
+.prestasi-card:hover {
+    box-shadow: 0 8px 25px rgba(var(--bs-black-rgb), 0.15);
+    transform: translateX(5px);
+}
+
+.prestasi-medal {
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.prestasi-level {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.level-internasional { background-color: var(--bs-purple); color: var(--bs-white); } 
+.level-nasional { background-color: var(--bs-danger); color: var(--bs-white); } 
+.level-provinsi { background-color: var(--bs-orange); color: var(--bs-white); } 
+.level-kota { background-color: var(--bs-primary); color: var(--bs-white); } 
+
+.achievement-box {
+    background: linear-gradient(135deg, var(--accent-color), var(--bs-warning-bg-subtle));
+    color: var(--bs-black);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.achievement-number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.konseling-card {
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    height: 100%;
+}
+
+.konseling-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.program-box {
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.program-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(var(--bs-black-rgb), 0.15);
+}
+
+.program-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 24px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(var(--bs-black-rgb), 0.8));
+    padding: 20px;
+    color: var(--bs-white);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+footer {
+    background: linear-gradient(135deg, var(--bs-gray-900), var(--bs-gray-800));
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--bs-white);
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--bs-white);
+    color: var(--primary-color);
+}
+
+.badge-ekskul {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.badge-olahraga { background-color: var(--bs-danger); color: var(--bs-white); } 
+.badge-seni { background-color: var(--bs-purple); color: var(--bs-white); } 
+.badge-ilmiah { background-color: var(--bs-primary); color: var(--bs-white); } 
+.badge-keagamaan { background-color: var(--bs-success); color: var(--bs-white); } 
+.badge-keterampilan { background-color: var(--bs-orange); color: var(--bs-white); } 
+
+.vote-section {
+    background: linear-gradient(135deg, var(--bs-purple), rgba(var(--bs-purple-rgb), 0.65));
+    color: var(--bs-white);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.candidate-card {
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+    color: var(--bs-black);
+}
+
+.candidate-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 4px solid var(--primary-color);
+}

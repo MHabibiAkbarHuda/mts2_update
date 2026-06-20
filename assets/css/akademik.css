@@ -1,0 +1,275 @@
+:root {
+    --primary-color: var(--bs-success); 
+    --secondary-color: var(--bs-primary); 
+    --accent-color: var(--bs-warning);
+}
+
+body {
+    font-family: 'Poppins', var(--bs-font-sans-serif);
+    background-color: var(--bs-light); 
+}
+
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal)); 
+    color: var(--bs-white);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('assets/img/hero/sekolah-main.jpg') center/cover;
+    opacity: 0.1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.curriculum-card {
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    height: 100%;
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+}
+
+.curriculum-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(var(--bs-black-rgb), 0.15);
+}
+
+.curriculum-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.schedule-table {
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+}
+
+.schedule-table thead {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal));
+    color: var(--bs-white);
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 1rem;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: var(--bs-light); 
+}
+
+.subject-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.subject-umum { background-color: var(--bs-primary); color: var(--bs-white); }
+.subject-mipa { background-color: var(--bs-success); color: var(--bs-white); }
+.subject-ips { background-color: var(--bs-orange); color: var(--bs-white); } 
+.subject-bahasa { background-color: var(--bs-purple); color: var(--bs-white); }
+.subject-mulok { background-color: var(--bs-warning); color: var(--bs-black); }
+
+.assessment-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal));
+    color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+}
+
+.assessment-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.program-box {
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.program-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(var(--bs-black-rgb), 0.15);
+}
+
+.program-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.osn-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    transition: all 0.3s ease;
+}
+
+.osn-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(var(--bs-black-rgb), 0.15);
+}
+
+.osn-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.osn-medal {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.literacy-card {
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    height: 100%;
+}
+
+.literacy-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.download-box {
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(var(--bs-black-rgb), 0.1);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.download-box:hover {
+    box-shadow: 0 8px 25px rgba(var(--bs-black-rgb), 0.15);
+    transform: translateX(5px);
+}
+
+.download-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.stats-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--bs-teal));
+    color: var(--bs-white);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+footer {
+    background: linear-gradient(135deg, var(--bs-gray-900), var(--bs-gray-800));
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--bs-white);
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--bs-white);
+    color: var(--primary-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(var(--bs-success-rgb), 0.15); 
+    color: var(--primary-color);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: 3px solid var(--bs-white);
+}
