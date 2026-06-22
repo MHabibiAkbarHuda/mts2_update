@@ -1,0 +1,13 @@
+# 1. Mengabaikan satu file spesifik secara presisi
+rahasia.php
+
+# 2. Mengabaikan file konfigurasi sistem
+.env
+Thumbs.db
+
+# 3. Mengabaikan semua file yang formatnya berakhiran .log (catatan error)
+*.log
+
+# 4. Mengabaikan seluruh isi dari sebuah folder (tambahkan tanda miring di akhir)
+/assets/uploads/test/
+/vendor/
