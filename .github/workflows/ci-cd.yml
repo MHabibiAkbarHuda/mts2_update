@@ -1,0 +1,37 @@
+name: Robot Otomatisasi Windows Habibi
+
+# 1. PEMICU (EVENT): Robot bergerak saat kamu push ke main
+on:
+  push:
+    branches: [ "main" ]
+
+# 2. DAFTAR TUGAS (JOBS)
+jobs:
+  proses-ci-cd:
+    # SEKARANG KITA PINJAM KOMPUTER WINDOWS DI CLOUD GITHUB!
+    runs-on: windows-latest 
+
+    steps:
+    # LANGKAH 1: Ambil kode dari repositori
+    - name: 📥 Ambil Kode Terbaru
+      uses: actions/checkout@v4
+
+    # LANGKAH 2 (CI): Memeriksa file index.html menggunakan perintah PowerShell Windows
+    - name: 🔍 Periksa Kesehatan Kode (CI)
+      shell: powershell
+      run: |
+        Write-Output "Memulai pemeriksaan file utama di server Windows..."
+        if (Test-Path index.html) {
+          Write-Output "✅ Aman! File index.html ditemukan."
+        } else {
+          Write-Output "❌ ERROR: File index.html hilang! Proses dihentikan."
+          exit 1
+        }
+
+    # LANGKAH 3 (CD): Simulasi pengiriman
+    - name: 🚀 Luncurkan ke Server Hosting (CD)
+      shell: powershell
+      run: |
+        Write-Output "Menghubungkan ke server internet dari mesin Windows..."
+        Write-Output "Mengunggah file-file website terbaru..."
+        Write-Output "🎉 BERHASIL! Website mts2_update kamu sudah diperbarui!"
